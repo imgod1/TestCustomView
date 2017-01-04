@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.kk.imgod.testcustomview.R;
+import com.kk.imgod.testcustomview.fragment.ColorMatrixViewFragment;
 import com.kk.imgod.testcustomview.fragment.CustomViewFragment;
 import com.kk.imgod.testcustomview.fragment.ProgressViewFragment;
 
@@ -16,6 +17,7 @@ public class CustomViewActivity extends AppCompatActivity {
 
     public static final int COMETYPE_TEST_CUSTOM = 0;//测试自定义view
     public static final int COMETYPE_TEST_PROGRESS = 1;//测试自定义progressview
+    public static final int COMETYPE_TEST_COLORMATRIX = 2;//测试ColorMatrix
     private int currentComeType = COMETYPE_TEST_CUSTOM;
     private Fragment currentFragment;
     private String title;
@@ -49,6 +51,10 @@ public class CustomViewActivity extends AppCompatActivity {
             case COMETYPE_TEST_PROGRESS:
                 title = getString(R.string.start_in_custom_progress_view);
                 currentFragment = new ProgressViewFragment();
+                break;
+            case COMETYPE_TEST_COLORMATRIX:
+                title = getString(R.string.start_in_color_matrix);
+                currentFragment = new ColorMatrixViewFragment();
                 break;
             default:
                 break;

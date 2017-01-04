@@ -6,4 +6,5 @@
     <string name="list">列表</string>
     <string name="start_in_custom_view">自定义view入门</string>
     <string name="start_in_custom_progress_view">自定义progressview入门</string>
+    <string name="start_in_color_matrix">测试色彩矩阵</string>
 </resources>

@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         titleList.add(getString(R.string.start_in_custom_view));
         titleList.add(getString(R.string.start_in_custom_progress_view));
+        titleList.add(getString(R.string.start_in_color_matrix));
         adapter = new MyAdapter(MainActivity.this, titleList);
         list_item.setAdapter(adapter);
     }
