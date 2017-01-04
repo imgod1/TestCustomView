@@ -3,4 +3,12 @@
     <declare-styleable name="CustomView">
         <attr name="maxRadiu" format="dimension"></attr>
     </declare-styleable>
+
+    <declare-styleable name="ProgressView">
+        <attr name="lineHeight" format="dimension"></attr>
+        <attr name="completedColor" format="color"></attr>
+        <attr name="waitngColor" format="color"></attr>
+        <attr name="progressTextColor" format="color"></attr>
+        <attr name="progressTextSize" format="dimension"></attr>
+    </declare-styleable>
 </resources>

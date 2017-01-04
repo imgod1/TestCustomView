@@ -6,6 +6,7 @@ import com.kk.imgod.testcustomview.views.CustomView;
 public class CustomViewFragment extends BaseFragment {
 
     private CustomView custom_main;
+    private Thread thread;
 
     @Override
     public int getResLayoutId() {
@@ -24,7 +25,19 @@ public class CustomViewFragment extends BaseFragment {
 
     @Override
     public void initValue() {
-        new Thread(custom_main).start();
+        thread = new Thread(custom_main);
+        thread.start();
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (null != thread) {
+            try {
+                thread.stop();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

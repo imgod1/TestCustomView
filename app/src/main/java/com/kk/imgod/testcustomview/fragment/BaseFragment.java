@@ -43,4 +43,8 @@ public abstract class BaseFragment extends Fragment {
      * 初始化数据
      */
     public abstract void initValue();
+
+    public View findViewById(int id) {
+        return parentView.findViewById(id);
+    }
 }

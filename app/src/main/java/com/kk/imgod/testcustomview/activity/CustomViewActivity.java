@@ -10,10 +10,12 @@ import android.os.Bundle;
 
 import com.kk.imgod.testcustomview.R;
 import com.kk.imgod.testcustomview.fragment.CustomViewFragment;
+import com.kk.imgod.testcustomview.fragment.ProgressViewFragment;
 
 public class CustomViewActivity extends AppCompatActivity {
 
-    public static final int COMETYPE_TEST_CUSTOM = 0x00;//测试自定义view
+    public static final int COMETYPE_TEST_CUSTOM = 0;//测试自定义view
+    public static final int COMETYPE_TEST_PROGRESS = 1;//测试自定义progressview
     private int currentComeType = COMETYPE_TEST_CUSTOM;
     private Fragment currentFragment;
     private String title;
@@ -40,11 +42,13 @@ public class CustomViewActivity extends AppCompatActivity {
     private void initValue() {
         currentComeType = getIntent().getIntExtra("currentComeType", currentComeType);
         switch (currentComeType) {
-            case 0:
+            case COMETYPE_TEST_CUSTOM:
                 title = getString(R.string.start_in_custom_view);
                 currentFragment = new CustomViewFragment();
                 break;
-            case 1:
+            case COMETYPE_TEST_PROGRESS:
+                title = getString(R.string.start_in_custom_progress_view);
+                currentFragment = new ProgressViewFragment();
                 break;
             default:
                 break;
