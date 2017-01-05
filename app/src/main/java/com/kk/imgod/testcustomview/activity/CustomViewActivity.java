@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.kk.imgod.testcustomview.R;
 import com.kk.imgod.testcustomview.fragment.ColorMatrixViewFragment;
@@ -38,6 +39,7 @@ public class CustomViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_view);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//这句代码仅仅把回退按钮展示出来
         initValue();
     }
 
@@ -68,5 +70,18 @@ public class CustomViewActivity extends AppCompatActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.add(R.id.flayout_content, currentFragment);
         transaction.commit();
+    }
+
+    //为回退按钮(home)添加响应事件
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

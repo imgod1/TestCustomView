@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kk.imgod.testcustomview.fragment.CustomViewFragment">
+
+    <com.kk.imgod.testcustomview.views.ColorMatrixView
+        android:id="@+id/cmv_1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.kk.imgod.testcustomview.views.ColorMatrixView
+                android:id="@+id/cmv_2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp" />
+
+            <com.kk.imgod.testcustomview.views.ColorMatrixView
+                android:id="@+id/cmv_3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp" />
+
+            <com.kk.imgod.testcustomview.views.ColorMatrixView
+                android:id="@+id/cmv_4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp" />
+
+            <com.kk.imgod.testcustomview.views.ColorMatrixView
+                android:id="@+id/cmv_5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp" />
+
+            <com.kk.imgod.testcustomview.views.ColorMatrixView
+                android:id="@+id/cmv_6"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
