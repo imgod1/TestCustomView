@@ -9,4 +9,5 @@
     <string name="start_in_color_matrix">测试色彩矩阵</string>
     <string name="start_in_path_effect">测试PathEffect</string>
     <string name="start_in_heart_line_path_effect">测试心电图PathEffect</string>
+    <string name="start_in_wave">测试杯水效果</string>
 </resources>
