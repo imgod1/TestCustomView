@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.kk.imgod.testcustomview.activity.CustomViewActivity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,12 +44,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        titleList.add(getString(R.string.start_in_custom_view));
-        titleList.add(getString(R.string.start_in_custom_progress_view));
-        titleList.add(getString(R.string.start_in_color_matrix));
-        titleList.add(getString(R.string.start_in_path_effect));
-        titleList.add(getString(R.string.start_in_heart_line_path_effect));
-        titleList.add(getString(R.string.start_in_wave));
+        String[] menuArray = getResources().getStringArray(R.array.menu_item);
+        titleList.addAll(Arrays.asList(menuArray));
         adapter = new MyAdapter(MainActivity.this, titleList);
         list_item.setAdapter(adapter);
     }

@@ -13,8 +13,10 @@ import com.kk.imgod.testcustomview.R;
 import com.kk.imgod.testcustomview.fragment.ColorMatrixViewFragment;
 import com.kk.imgod.testcustomview.fragment.CustomViewFragment;
 import com.kk.imgod.testcustomview.fragment.HeartLinePathEffectFragment;
+import com.kk.imgod.testcustomview.fragment.LayerFragment;
 import com.kk.imgod.testcustomview.fragment.PathEffectFragment;
 import com.kk.imgod.testcustomview.fragment.ProgressViewFragment;
+import com.kk.imgod.testcustomview.fragment.TestMeasureFragment;
 import com.kk.imgod.testcustomview.fragment.WaveFragment;
 
 public class CustomViewActivity extends AppCompatActivity {
@@ -25,6 +27,8 @@ public class CustomViewActivity extends AppCompatActivity {
     public static final int COMETYPE_TEST_PATHEFFECT = 3;//测试PathEffect
     public static final int COMETYPE_TEST_HEART_LINE_PATHEFFECT = 4;//测试心电图PathEffect
     public static final int COMETYPE_TEST_WAVE = 5;//测试杯水效果
+    public static final int COMETYPE_TEST_LAYER = 6;//测试layer效果
+    public static final int COMETYPE_TEST_MEASURE = 7;//测试measure
     private int currentComeType = COMETYPE_TEST_CUSTOM;
     private Fragment currentFragment;
     private String title;
@@ -75,6 +79,14 @@ public class CustomViewActivity extends AppCompatActivity {
             case COMETYPE_TEST_WAVE:
                 title = getString(R.string.start_in_wave);
                 currentFragment = new WaveFragment();
+                break;
+            case COMETYPE_TEST_LAYER:
+                title = getString(R.string.start_in_layer);
+                currentFragment = new LayerFragment();
+                break;
+            case COMETYPE_TEST_MEASURE:
+                title = getString(R.string.start_in_measure);
+                currentFragment = new TestMeasureFragment();
                 break;
             default:
                 break;
