@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.kk.imgod.testcustomview.R;
+import com.kk.imgod.testcustomview.fragment.BlurImageViewFragment;
 import com.kk.imgod.testcustomview.fragment.ColorMatrixViewFragment;
 import com.kk.imgod.testcustomview.fragment.CustomViewFragment;
 import com.kk.imgod.testcustomview.fragment.HeartLinePathEffectFragment;
@@ -29,6 +30,7 @@ public class CustomViewActivity extends AppCompatActivity {
     public static final int COMETYPE_TEST_WAVE = 5;//测试杯水效果
     public static final int COMETYPE_TEST_LAYER = 6;//测试layer效果
     public static final int COMETYPE_TEST_MEASURE = 7;//测试measure
+    public static final int COMETYPE_TEST_BLUR_IMAGEVIEW = 8;//测试模糊ImageVIew
     private int currentComeType = COMETYPE_TEST_CUSTOM;
     private Fragment currentFragment;
     private String title;
@@ -87,6 +89,10 @@ public class CustomViewActivity extends AppCompatActivity {
             case COMETYPE_TEST_MEASURE:
                 title = getString(R.string.start_in_measure);
                 currentFragment = new TestMeasureFragment();
+                break;
+            case COMETYPE_TEST_BLUR_IMAGEVIEW:
+                title = getString(R.string.start_in_blur);
+                currentFragment = new BlurImageViewFragment();
                 break;
             default:
                 break;
