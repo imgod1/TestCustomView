@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.kk.imgod.testcustomview.R;
 import com.kk.imgod.testcustomview.fragment.BlurImageViewFragment;
+import com.kk.imgod.testcustomview.fragment.ClockViewFragment;
 import com.kk.imgod.testcustomview.fragment.ColorMatrixViewFragment;
 import com.kk.imgod.testcustomview.fragment.CustomViewFragment;
 import com.kk.imgod.testcustomview.fragment.HeartLinePathEffectFragment;
@@ -31,6 +32,7 @@ public class CustomViewActivity extends AppCompatActivity {
     public static final int COMETYPE_TEST_LAYER = 6;//测试layer效果
     public static final int COMETYPE_TEST_MEASURE = 7;//测试measure
     public static final int COMETYPE_TEST_BLUR_IMAGEVIEW = 8;//测试模糊ImageVIew
+    public static final int COMETYPE_TEST_CLOCK_VIEW = 9;//测试表盘View
     private int currentComeType = COMETYPE_TEST_CUSTOM;
     private Fragment currentFragment;
     private String title;
@@ -93,6 +95,10 @@ public class CustomViewActivity extends AppCompatActivity {
             case COMETYPE_TEST_BLUR_IMAGEVIEW:
                 title = getString(R.string.start_in_blur);
                 currentFragment = new BlurImageViewFragment();
+                break;
+            case COMETYPE_TEST_CLOCK_VIEW:
+                title = getString(R.string.start_in_clock);
+                currentFragment = new ClockViewFragment();
                 break;
             default:
                 break;

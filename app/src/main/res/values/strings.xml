@@ -14,6 +14,7 @@
     <string name="start_in_layer">测试Layer效果</string>
     <string name="start_in_measure">测试measure效果</string>
     <string name="start_in_blur">测试ImageView模糊效果</string>
+    <string name="start_in_clock">测试表盘控件</string>
     <!--首页列表数据-->
     <string-array name="menu_item">
         <item>@string/start_in_custom_view</item>
@@ -25,5 +26,6 @@
         <item>@string/start_in_layer</item>
         <item>@string/start_in_measure</item>
         <item>@string/start_in_blur</item>
+        <item>@string/start_in_clock</item>
     </string-array>
 </resources>
